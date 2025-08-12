@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>MovieMate</title>
+</head>
+<body>
+    
+    <nav class="bg-purple-600 h-10 md:h-20 w-full flex items-center">
+        
+            <p class="text-white absolute left-3 md:text-2xl md: font-bold">MovieMate</p>
+       
+    </nav>
+   <main class="h-full w-full flex flex-col items-center justify-center p-6  bg-gradient-to-br from-purple-50  via-purple-200 to-purple-300  md:py-20 ">
+    <div class="max-w-2xl bg-white shadow-lg rounded-2xl p-8 border border-purple-100 text-center">
+        <!-- Heading -->
+        <h1 class="text-2xl font-extrabold text-gray-800">
+            Welcome to <span class="text-purple-600 text-4xl">MovieMate</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mt-3 text-lg text-gray-600">
+            Your go-to place for your <span class="font-medium text-purple-500">movie tracker</span>
+        </p>
+
+        <!-- Divider -->
+        <div class="my-6 border-t border-purple-200 w-20 mx-auto"></div>
+
+        <!-- Description -->
+        <p class="text-gray-700 leading-relaxed">
+            Movie Tracker is your personal space to keep track of every movie you’ve watched and every movie you plan 
+            to watch in the future. With a simple and secure login, you can build your own movie lists, rate films, 
+            and never forget what’s next on your watchlist!
+        </p>
+
+        <!-- Call to Action -->
+        <button class="mt-8 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg shadow-md transition-all duration-300 cursor-pointer">
+            <a href="signup.html">Login / SignUp</a>
+        </button>
+    </div>
+</main>
+<footer class="bg-purple-600 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Brand -->
+        <div>
+            <h2 class="text-2xl font-bold">🎬 MovieMate</h2>
+            <p class="mt-3 text-gray-300 text-sm">
+                Track the movies you’ve watched and plan your next watchlist with ease. 
+                Your personal movie companion.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Features</h3>
+            <ul class="space-y-2 text-gray-300 text-sm">
+                <li>✔ Watched Movies List</li>
+                <li>✔ To-Watch List</li>
+                <li>✔ Ratings & Reviews</li>
+                <li>✔ Search & Filter</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
+            <p class="text-gray-300 text-sm">Email: support@moviemate.com</p>
+            <p class="text-gray-300 text-sm mt-2">Phone: +91 98765 43210</p>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-purple-800 text-center py-4 text-sm text-gray-300">
+        &copy; <span id="year"></span> MovieMate. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
