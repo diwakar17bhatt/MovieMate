@@ -14,10 +14,10 @@ if (document.body.id === "sign-up-page") {
       });
       const data = await response.json();
       if (response.ok) {
-        const p = document.createElement("p");
-        p.innerText = data.message;
-        document.getElementById("signup-message").appendChild(p);
-        document.getElementById("sign-up-form").reset(); // Reset the form
+         if (data.user.name) {
+        localStorage.setItem("userName", data.user.name);
+        localStorage.setItem("userEmail", data.user.email);
+      }
       } else if (data.error) {
         const p = document.createElement("p");
         p.innerText = data.error;
@@ -44,10 +44,16 @@ if (document.body.id === "login-page") {
         body: JSON.stringify({ email, password }),
       });
       const data = await response.json();
-      console.log(data.user);
-      if (data.user.name) {
+      console.log(data);
+      if (data.user) {
         localStorage.setItem("userName", data.user.name);
         localStorage.setItem("userEmail", data.user.email);
       }
+      else if(data.error) {
+        const p = document.createElement("p");
+        p.innerText = data.error;
+        console.log(data.error);
+        document.getElementById("login-message").appendChild(p);
+          }
     });
 }
